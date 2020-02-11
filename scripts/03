@@ -1,0 +1,5 @@
+#!/bin/sh
+# This delete a user, which name is given as a parameter.
+
+pgrep -u $1 |  while read PID; do kill -9 $PID; done
+userdel $1

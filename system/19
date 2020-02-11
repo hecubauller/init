@@ -1,0 +1,1 @@
+systemctl --type service | grep service | cut -d. -f1

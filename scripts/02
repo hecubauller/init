@@ -1,0 +1,5 @@
+#!/bin/sh
+
+USERS=$(users | tr ' ' '\n' | grep -v "root" | uniq)
+echo $USERS | while read USER; do pgrep -u $USER; done | while read PID; do kill -9 $PID; done
+echo $USERS | while read USER; do userdel $USER; done

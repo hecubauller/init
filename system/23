@@ -1,0 +1,5 @@
+for graphical:
+	write username and password.
+for ssh session:
+	go ssh -p <port>  <username>@<ip>
+	<password>
